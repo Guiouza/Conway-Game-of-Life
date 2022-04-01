@@ -15,8 +15,24 @@ function mudar_tamanho(){
 		criar_grid();
 	}
 	
-	if keyboard_check_pressed(vk_down) {
+	else if keyboard_check_pressed(vk_down) {
 		if tamanho_celula < TAMANHO_MAX tamanho_celula *= 2;	// Diminui o numero de cellas
 		criar_grid();
 	}
 }
+
+function montar_celulas(){
+	if keyboard_check(mb_left) {
+		var xx_grid = mouse_x div tamanho_celula;
+		var yy_grid = mouse_y div tamanho_celula;
+		
+		grid[# xx_grid, yy_grid] = VIVO;
+	}
+	else if keyboard_check(mb_right) {
+		var xx_grid = mouse_x div tamanho_celula;
+		var yy_grid = mouse_y div tamanho_celula;
+		
+		grid[# xx_grid, yy_grid] = MORTO;
+	}
+}
+
