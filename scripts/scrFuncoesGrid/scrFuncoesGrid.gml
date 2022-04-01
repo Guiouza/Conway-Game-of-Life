@@ -10,12 +10,12 @@ function criar_grid(){
 function mudar_tamanho(){
 	// O numero de colunas e o numero de linhas e inversamente proporcional ao tamanhho da celula
 	
-	if keyboard_check(vk_up) {
+	if keyboard_check_pressed(vk_up) {
 		if tamanho_celula > TAMANHO_MIN tamanho_celula /= 2;	// Aumenta o numero de celulas
 		criar_grid();
 	}
 	
-	if keyboard_check(vk_down) {
+	if keyboard_check_pressed(vk_down) {
 		if tamanho_celula < TAMANHO_MAX tamanho_celula *= 2;	// Diminui o numero de cellas
 		criar_grid();
 	}

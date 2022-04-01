@@ -19,8 +19,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
     {"roomId":{"name":"Jogo","path":"rooms/Jogo/Jogo.yy",},},
+    {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
