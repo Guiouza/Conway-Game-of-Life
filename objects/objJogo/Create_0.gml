@@ -2,7 +2,8 @@
 
 // Constantes da grid
 #macro TAMANHO_MIN 8
-#macro TAMANHO_MAX 32
+#macro TAMANHO_MAX 64
+#macro ALPHA_GRID .25
 
 // Estatos das celulas
 #macro MORTO 0
