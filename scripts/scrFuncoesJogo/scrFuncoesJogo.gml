@@ -134,3 +134,28 @@ function main(){
 		grid[# mudancas[i][0], mudancas[i][1]] = mudancas[i][2];			// Aplica as mudancas na grid
 	}
 }
+
+function salvar_grid(){
+	var tecla = -1;
+	
+	for (var i = 0; i <= 9; i ++) {						// Passa por todas as teclas de numero
+		if keyboard_check(ord(i)) tecla = i;			// Verifica se alguma tecla foi pressionada
+	}
+	
+	if tecla != -1 and keyboard_check(vk_lshift) {		// Salva a grid ao pressionar <shift + numero>
+		ini_open("Salvar.ini");
+		ini_write_string("Salvar", string(tecla), ds_grid_write(grid));
+		ini_close();
+	}
+	else if tecla != -1 and keyboard_check(vk_delete) {	// Exclui a configuracao salva no respectivo numero ao pressionar <del + numero>
+		ini_open("Salvar.ini");
+		ini_key_delete("Salvar", string(tecla));
+		ini_close();
+	}
+	else if tecla != -1 {								// Carrega a configuracao salva do numero pressionado
+		ini_open("Salvar.ini")
+		ds_grid_read(grid, ini_read_string("Salvar", string(tecla), ds_grid_write(grid)));
+		ini_close();
+		
+	}
+}

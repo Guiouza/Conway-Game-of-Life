@@ -11,6 +11,7 @@ if iniciar {		// Inicia o jogo apos apertar enter
 else {
 	mudar_tamanho();
 	montar_celulas();
+	salvar_grid();
 }
 
 
