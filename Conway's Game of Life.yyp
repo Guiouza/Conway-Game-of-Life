@@ -1,6 +1,8 @@
 {
   "resources": [
+    {"id":{"name":"objJogo","path":"objects/objJogo/objJogo.yy",},"order":0,},
     {"id":{"name":"Menu","path":"rooms/Menu/Menu.yy",},"order":1,},
+    {"id":{"name":"scrFuncoesGrid","path":"scripts/scrFuncoesGrid/scrFuncoesGrid.yy",},"order":0,},
     {"id":{"name":"Jogo","path":"rooms/Jogo/Jogo.yy",},"order":0,},
   ],
   "Options": [
@@ -10,15 +12,15 @@
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
-  "defaultScriptType": 0,
+  "defaultScriptType": 1,
   "isEcma": false,
   "configs": {
     "name": "Default",
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Jogo","path":"rooms/Jogo/Jogo.yy",},},
     {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
+    {"roomId":{"name":"Jogo","path":"rooms/Jogo/Jogo.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
