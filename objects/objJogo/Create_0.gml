@@ -12,3 +12,4 @@
 tamanho_celula = TAMANHO_MAX;
 
 criar_grid();
+

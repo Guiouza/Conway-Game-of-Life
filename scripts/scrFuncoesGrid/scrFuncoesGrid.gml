@@ -22,13 +22,13 @@ function mudar_tamanho(){
 }
 
 function montar_celulas(){
-	if keyboard_check(mb_left) {
+	if mouse_check_button(mb_left) {
 		var xx_grid = mouse_x div tamanho_celula;
 		var yy_grid = mouse_y div tamanho_celula;
 		
 		grid[# xx_grid, yy_grid] = VIVO;
 	}
-	else if keyboard_check(mb_right) {
+	else if mouse_check_button(mb_right) {
 		var xx_grid = mouse_x div tamanho_celula;
 		var yy_grid = mouse_y div tamanho_celula;
 		
