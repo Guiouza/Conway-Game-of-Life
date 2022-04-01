@@ -10,6 +10,7 @@
 #macro VIVO 1
 
 tamanho_celula = TAMANHO_MAX;
+iniciar = false;
 
 criar_grid();
 
