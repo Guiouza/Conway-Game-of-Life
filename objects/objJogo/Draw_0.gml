@@ -1,4 +1,4 @@
-/// @desenho Desenha as linhas e colunas
+/// @desenho_grid Desenha as linhas e colunas
 
 for (var coluna = 0; coluna < numero_colunas; coluna++) {	// Desenha as colunas da grid
 	draw_set_alpha(ALPHA_GRID);
@@ -10,6 +10,7 @@ for (var linha = 0; linha < numero_linhas; linha++) {		// Desenha as linhas da g
 	draw_line(0, linha * tamanho_celula, room_width, linha * tamanho_celula);
 }
 
+// @desenho_celula Desenha as celulas
 var pintar_celula = function (xx, yy, cor) {
 	/*
 	Pinta o uadrado da grid com a respectiva cor:
