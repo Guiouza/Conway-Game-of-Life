@@ -175,7 +175,7 @@ function salvar_grid(){
 	}
 	else if tecla != -1 {								// Carrega a configuracao salva do numero pressionado
 		ini_open("Salvar.ini");
-		ds_grid_read(grid, ini_read_string("Salvar", string(tecla), ds_grid_width(grid)));
+		ds_grid_read(grid, ini_read_string("Salvar", string(tecla), ds_grid_write(grid)));
 		ini_close();
 		
 	}
