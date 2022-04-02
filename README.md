@@ -1,2 +1,2 @@
-# Conway-Game-of-Live
-Conway's Game of Live no Game Maker Lenguage
+# Conway-Game-of-Life
+Conway's Game of Life no Game Maker Lenguage
