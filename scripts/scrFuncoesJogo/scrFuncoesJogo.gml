@@ -144,6 +144,26 @@ function salvar_grid(){
 	
 	if tecla != -1 and keyboard_check(vk_lshift) {		// Salva a grid ao pressionar <shift + numero>
 		ini_open("Salvar.ini");
+		
+		// Cria um copia da grid atual
+		var _grid = ds_grid_create(numero_colunas, numero_linhas)
+		ds_grid_copy(_grid, grid);
+		
+		// Salva o tamanho atual da celula
+		var num = tamanho_celula;
+		var _numero_colunas = numero_colunas;
+		var _numero_linhas = numero_linhas;
+		
+		// Cria uma grid vazia com o tamanho maximo
+		tamanho_celula = TAMANHO_MIN;
+		criar_grid();
+		
+		// Cria uma grid com a configuração da original, mas com o tamanho maximo
+		ds_grid_set_grid_region(grid, _grid, 0, 0, _numero_colunas, _numero_linhas, 0, 0);
+		
+		// Valta o tamanho da celula para o original
+		tamanho_celula = num;
+		
 		ini_write_string("Salvar", string(tecla), ds_grid_write(grid));
 		ini_close();
 	}
@@ -153,8 +173,8 @@ function salvar_grid(){
 		ini_close();
 	}
 	else if tecla != -1 {								// Carrega a configuracao salva do numero pressionado
-		ini_open("Salvar.ini")
-		ds_grid_read(grid, ini_read_string("Salvar", string(tecla), ds_grid_write(grid)));
+		ini_open("Salvar.ini");
+		ds_grid_read(grid, ini_read_string("Salvar", string(tecla), ds_grid_width(grid)));
 		ini_close();
 		
 	}
